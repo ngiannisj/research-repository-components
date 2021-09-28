@@ -1,0 +1,65 @@
+.header {
+  width: 100%;
+  background-color: $base-blue;
+
+  &__header-top {
+    padding: 4.8rem 0;
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+  }
+
+  &__logo-image-container {
+    width: 25.645rem;
+    height: 6.2rem;
+  }
+
+  &__logo-image {
+    width: 100%;
+    height: 100%;
+    padding-right: 1.6rem;
+  }
+
+  &__logo-text-container {
+    padding-left: 1.6rem;
+    border-left: 1px solid $white;
+  }
+
+  &__header-bottom {
+    width: 100%;
+  }
+
+  &__navbar {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border-bottom: 0.8rem solid $base-yellow;
+  }
+
+  &__nav-link {
+    padding: 1.6rem;
+    margin-bottom: -8px; //Ensures bottom borders overlap
+    text-align: center;
+    border-bottom: 0.8rem solid $base-yellow;
+
+    &--align-right {
+      margin-left: auto;
+      display: flex;
+
+      .header__nav-link {
+        &:last-of-type {
+          padding-right: 0;
+        }
+      }
+    }
+
+    &--active {
+      border-color: $base-blue;
+    }
+  }
+}

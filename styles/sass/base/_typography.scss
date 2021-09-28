@@ -1,0 +1,119 @@
+//Default
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0rem;
+  line-height: 2.4rem;
+  color: $black;
+  font-size: 1.6rem;
+}
+
+//Header
+.header {
+  &__logo-link {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &__logo-text-heading {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 4rem;
+  }
+
+  &__logo-text-subheading {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    font-weight: 400;
+  }
+
+  &__nav-link {
+    color: $base-yellow;
+    text-decoration: none;
+
+    &--active {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $white;
+    }
+  }
+}
+
+//Footer
+.footer {
+  &__nav-link {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      font-weight: 600;
+    }
+  }
+
+  &__copyright-disclaimer {
+    color: $white;
+    font-size: 1.4rem;
+  }
+}
+
+//Notification bubble
+.notification-bubble {
+  color: $base-blue;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 0;
+}
+
+//Sidebar
+.sidebar-nav__nav-link {
+  color: $grey;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $base-blue;
+    font-weight: 600;
+  }
+
+  &--active {
+    color: $base-blue;
+    font-weight: 600;
+  }
+}
+
+//Form
+.field {
+  &__label {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: $base-blue;
+
+    &--small {
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.7rem;
+    }
+  }
+
+  &__input {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: $base-blue;
+
+    &-select-list {
+      &-option {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        color: $base-blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>A Basic HTML5 Template</title>
+    <meta
+      name="description"
+      content="A simple HTML5 Template for new projects."
+    />
+    <meta name="author" content="Nathan Giannis" />
+
+    <meta property="og:title" content="Research repository components" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="CSS/JS/Html for research repository compnonets"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/css/style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__header-top">
+        <a href="#" class="header__logo-link">
+          <div class="header__logo-image-container">
+            <img
+              class="header__logo-image"
+              src="images/pngs/aus_gov_logo.png"
+              alt="australian_government_logo"
+            />
+          </div>
+          <div class="header__logo-text-container">
+            <h1 class="header__logo-text-heading site-heading">
+              Research Repository
+            </h1>
+            <h2 class="header__logo-text-subheading site-subheading">
+              All your reserch in one place.
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div class="header__header-bottom">
+        <nav class="header__navbar">
+          <a class="header__nav-link header__nav-link--active" href="#">
+            Home
+          </a>
+          <a class="header__nav-link" href="#"> Library </a>
+          <a class="header__nav-link" href="#"> Contribute </a>
+          <a class="header__nav-link" href="#"> Login </a>
+          <a class="header__nav-link" href="#"> Logout </a>
+          <div class="header__nav-link--align-right">
+            <a class="header__nav-link" href="#"> Librarian Portal </a>
+            <a class="header__nav-link" href="#"> Profile </a>
+            <span
+              class="
+                notification-bubble notification-bubble__header-notification
+              "
+              >4</span
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+    <br />
+    <br />
+
+    <!-- Sidebar nav -->
+    <div class="sidebar-nav">
+      <a href="#" class="sidebar-nav__nav-link sidebar-nav__nav-link--active"
+        >Requests<span
+          class="notification-bubble notification-bubble__side-nav-notification"
+          >4</span
+        ></a
+      >
+      <a href="#" class="sidebar-nav__nav-link">Teams and projects</a>
+      <a href="#" class="sidebar-nav__nav-link">Themes and tags</a>
+    </div>
+
+    <br />
+    <br />
+
+    <!-- Inputs and buttons -->
+    <!-- Text input -->
+    <div class="field">
+      <label for="fname" class="field__label">First name:</label>
+      <input
+        type="text"
+        id="fname"
+        class="field__input field__input-search"
+        name="fname"
+        value=""
+      />
+    </div>
+
+    <div class="field">
+      <label for="fname" class="field__label">First name:</label>
+      <input
+        type="text"
+        id="fname"
+        class="field__input"
+        name="fname"
+        value=""
+      />
+    </div>
+
+    <!-- Text area -->
+    <div class="field">
+      <label for="fname" class="field__label">First name:</label>
+      <textarea
+        type="text"
+        id="fname"
+        class="field__input field__input-text-area"
+        name="fname"
+      ></textarea>
+    </div>
+
+    <!-- Select list -->
+    <div class="field">
+      <label for="fname" class="field__label">First name:</label>
+      <div class="field__input-select-list">
+        <button
+          onclick="toggleDropdown(this)"
+          class="field__input field__input-select-list-btn"
+          data-selected=""
+        ></button>
+        <div class="field__input-select-list-options">
+          <button
+            onclick="selectListOptionClick(this)"
+            class="field__input-select-list-option"
+            data-value="1"
+          >
+            Home
+          </button>
+          <button
+            onclick="selectListOptionClick(this)"
+            class="field__input-select-list-option"
+            data-value="2"
+          >
+            About
+          </button>
+          <button
+            onclick="selectListOptionClick(this)"
+            class="field__input-select-list-option"
+            data-value="3"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkbox -->
+      <div class="field__list-container">
+        <div class="field__list-item">
+          <input type="checkbox" id="checkbox-1" name="checkbox-1" class="field__input-toggle field__input-checkbox" value="Bike" />
+          <label for="checkbox-1" class="field__label field__label--small field__label--toggle field__label--checkbox" tabindex="0">
+            I have a bike
+          </label>
+        </div>
+
+        <div class="field__list-item">
+          <input type="checkbox" id="checkbox-2" name="checkbox-2" class="field__input-toggle field__input-checkbox" value="Car" />
+          <label for="checkbox-2" class="field__label field__label--small field__label--toggle field__label--checkbox" tabindex="0">
+            tag
+          </label>
+        </div>
+
+        <div class="field__list-item">
+          <input type="checkbox" id="checkbox-3" name="checkbox-3" class="field__input-toggle field__input-checkbox" value="Boat" />
+          <label for="checkbox-3" class="field__label field__label--small field__label--toggle field__label--checkbox" tabindex="0">
+            I have a boat
+          </label>
+        </div>
+
+        <div class="field__list-item">
+          <input type="checkbox" id="checkbox-4" name="checkbox-4" class="field__input-toggle field__input-checkbox" value="Boat" />
+          <label for="checkbox-4" class="field__label field__label--small field__label--toggle field__label--checkbox" tabindex="0">
+            I have a boat
+          </label>
+        </div>
+
+        <div class="field__list-item">
+          <input type="checkbox" id="checkbox-5" name="checkbox-5" class="field__input-toggle field__input-checkbox" value="Boat" />
+          <label for="checkbox-5" class="field__label field__label--small field__label--toggle field__label--checkbox" tabindex="0">
+            I have a boat
+          </label>
+        </div>
+
+        <div class="field__list-item">
+          <input type="checkbox" id="checkbox-6" name="checkbox-6" class="field__input-toggle field__input-checkbox" value="Boat" />
+          <label for="checkbox-6" class="field__label field__label--small field__label--toggle field__label--checkbox" tabindex="0">
+            I have a boat
+          </label>
+        </div>
+
+        <div class="field__list-item">
+          <input type="checkbox" id="checkbox-7" name="checkbox-7" class="field__input-toggle field__input-checkbox" value="Boat" />
+          <label for="checkbox-7" class="field__label field__label--small field__label--toggle field__label--checkbox" tabindex="0">
+            I have a boat
+          </label>
+        </div>
+
+        <div class="field__list-item">
+          <input type="checkbox" id="checkbox-8" name="checkbox-8" class="field__input-toggle field__input-checkbox" value="Boat" disabled/>
+          <label for="checkbox-8" class="field__label field__label--small field__label--toggle field__label--checkbox" tabindex="0">
+            I have a boat
+          </label>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+    <!-- Radio buttons -->
+    <div class="field__list-container field__list-container--vertical">
+      <div class="field__list-item">
+        <input type="radio" id="radio-1" name="radio-button-group" class="field__input-toggle field__input-radio" value="Bike" />
+        <label for="radio-1" class="field__label field__label--small field__label--toggle field__label--radio" tabindex="0">
+          I have a bike
+        </label>
+      </div>
+
+      <div class="field__list-item">
+        <input type="radio" id="radio-2" name="radio-button-group" class="field__input-toggle field__input-radio" value="Car" />
+        <label for="radio-2" class="field__label field__label--small field__label--toggle field__label--radio" tabindex="0">
+          tag
+        </label>
+      </div>
+
+      <div class="field__list-item">
+        <input type="radio" id="radio-3" name="radio-button-group" class="field__input-toggle field__input-radio" value="Boat" />
+        <label for="radio-3" class="field__label field__label--small field__label--toggle field__label--radio" tabindex="0">
+          I have a boat
+        </label>
+      </div>
+      </div>
+
+      <br />
+      <br />
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__nav-links">
+        <a class="footer__nav-link" href="#"> Privacy </a>
+        <a class="footer__nav-link" href="#"> Need help? </a>
+        <a class="footer__nav-link" href="#"> Accessibility </a>
+        <a class="footer__nav-link" href="#"> Disclaimer </a>
+      </div>
+      <div class="footer__footer-bottom">
+        <span class="footer__copyright-disclaimer"
+          >&copy; Commonwealth of Australia</span
+        >
+      </div>
+    </footer>
+
+    <script>
+      //Custom dropdown functionality
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function toggleDropdown($this) {
+        $($this)
+          .next(".field__input-select-list-options")
+          .toggleClass("field__input-select-list-options--active");
+        $($this).toggleClass("field__input-select-list-btn--active");
+      }
+
+      function selectListOptionClick($this) {
+        $($this)
+          .closest(".field__input-select-list")
+          .find(".field__input-select-list-btn")
+          .first()
+          .attr("data-selected", $($this).data("value"));
+        $($this)
+          .closest(".field__input-select-list")
+          .find(".field__input-select-list-btn")
+          .first()
+          .html($($this).text());
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      $(window).click(function (event) {
+        if (!event.target.matches(".field__input-select-list-btn")) {
+          const selectListOptions = $(".field__input-select-list-options");
+          const selectListBtns = $(".field__input-select-list-btn");
+          let i;
+          for (i = 0; i < selectListOptions.length; i++) {
+            $(selectListOptions[i]).removeClass(
+              "field__input-select-list-options--active"
+            );
+          }
+          for (i = 0; i < selectListBtns.length; i++) {
+            $(selectListBtns[i]).removeClass(
+              "field__input-select-list-btn--active"
+            );
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
