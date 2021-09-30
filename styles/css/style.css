@@ -27,17 +27,35 @@ body {
   color: #253c78;
   font-size: 1.6rem; }
 
+h1 {
+  font-size: 5.2rem;
+  font-weight: 600;
+  line-height: 7.8rem; }
+
+h2 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 6.7rem; }
+
+h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4.5rem; }
+
 h4 {
   font-size: 2rem;
   line-height: 3rem;
   font-weight: 600;
   color: #253c78; }
 
-p.paragraph--black {
-  color: #000000; }
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.1rem;
+  color: #253c78; }
 
 .faded {
-  opacity: .7; }
+  opacity: 0.7; }
 
 .header__logo-link {
   color: #ffffff;
@@ -94,6 +112,8 @@ p.paragraph--black {
   font-weight: 600;
   line-height: 3rem;
   color: #253c78; }
+  .field__label--secondary {
+    font-weight: 400; }
   .field__label--small {
     font-size: 1.8rem;
     font-weight: 400;
@@ -142,6 +162,9 @@ p.paragraph--black {
   line-height: 3rem;
   color: #253c78;
   text-decoration: none; }
+  .link--normal {
+    font-weight: 400;
+    font-size: 1.8rem; }
   .link:hover {
     cursor: pointer;
     text-decoration: underline; }
@@ -157,6 +180,12 @@ p.paragraph--black {
 
 .pill {
   color: #253c78; }
+
+.text--black {
+  color: #000000; }
+
+.text--pale-grey {
+  color: #979797; }
 
 .notification-bubble {
   background-color: #f0d275;
@@ -194,15 +223,13 @@ p.paragraph--black {
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 3rem; }
-  .field:last-of-type {
-    margin-bottom: 6rem; }
   .field__list-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     align-items: center;
     justify-items: center;
-    grid-column-gap: .6rem;
-    grid-row-gap: .6rem; }
+    grid-column-gap: 0.6rem;
+    grid-row-gap: 0.6rem; }
     .field__list-container--vertical {
       display: block; }
       .field__list-container--vertical .field__list-item {
@@ -213,8 +240,13 @@ p.paragraph--black {
     justify-content: flex-start;
     width: 100%;
     max-width: 16rem; }
+  .field__description {
+    padding-bottom: 1.5rem;
+    margin-top: -.8rem; }
   .field__label {
     padding-bottom: 1.8rem; }
+    .field__label--secondary {
+      padding-bottom: 1.3rem; }
     .field__label--toggle {
       cursor: pointer;
       position: relative;
@@ -251,6 +283,17 @@ p.paragraph--black {
     width: 100%;
     border-radius: 2rem;
     padding: 1rem; }
+    .field__input--secondary {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #ffffff;
+      border: 0.3rem solid #253c78;
+      border-radius: .5rem;
+      padding: .6rem;
+      height: 3.8rem; }
+    .field__input + .field__input-select-list-options {
+      margin-top: -2.6rem; }
     .field__input-search {
       background-image: url("/images/svgs/magnifying-glass.svg");
       background-repeat: no-repeat;
@@ -305,7 +348,7 @@ p.paragraph--black {
     .field__input-toggle {
       display: none; }
       .field__input-toggle:disabled ~ .field__label--toggle {
-        opacity: .5; }
+        opacity: 0.5; }
         .field__input-toggle:disabled ~ .field__label--toggle:hover {
           cursor: default; }
     .field__input-checkbox:checked ~ .field__label--checkbox::before {
@@ -317,19 +360,25 @@ p.paragraph--black {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .button-group .button, .button-group .link {
+  .button-group .button,
+  .button-group .link {
     margin-right: 6.8rem; }
-    .button-group .button:last-child, .button-group .link:last-child {
+    .button-group .button:last-child,
+    .button-group .link:last-child {
       margin-right: 0; }
-  .button-group--small .button, .button-group--small .link {
+  .button-group--small .button,
+  .button-group--small .link {
     margin-right: 4rem; }
   .button-group--vertical {
     flex-direction: column; }
-    .button-group--vertical .button, .button-group--vertical .link {
+    .button-group--vertical .button,
+    .button-group--vertical .link {
       margin: 0 0 4rem 0; }
-      .button-group--vertical .button:last-child, .button-group--vertical .link:last-child {
+      .button-group--vertical .button:last-child,
+      .button-group--vertical .link:last-child {
         margin-bottom: 0; }
-    .button-group--vertical.button-group--small .button, .button-group--vertical.button-group--small .link {
+    .button-group--vertical.button-group--small .button,
+    .button-group--vertical.button-group--small .link {
       margin: 0 0 2.4rem 0; }
   .button-group--align-right {
     justify-content: flex-end; }
@@ -343,7 +392,7 @@ p.paragraph--black {
   background-color: #253c78;
   border: 0.3rem solid #253c78;
   border-radius: 5rem;
-  transition: transform 0.3s ease 0s, background-color 0.3s ease 0s, box-shadow 0.3s ease 0s, outline 0s; }
+  transition: transform 0.3s ease 0s, background-color 0.3s ease 0s, box-shadow 0.3s ease 0s, outline 0s; }
   .button:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 0.8rem 0 black;
@@ -377,8 +426,15 @@ p.paragraph--black {
     margin-right: 1.2rem; }
 
 .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none; }
+  .link__image {
+    width: 2.2rem;
+    height: 2.5rem;
+    margin-left: 1.2rem; }
 
 .pathway-card-container {
   display: grid;
@@ -459,6 +515,44 @@ p.paragraph--black {
     margin-right: 1rem;
     width: 1.9rem;
     height: 1.7rem; }
+
+.modal-container {
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 2;
+  padding-top: 29rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.45); }
+
+.modal {
+  padding: 4.8rem 6.2rem;
+  width: 78.3rem;
+  z-index: 3;
+  /* Sit on top */
+  background: #ffffff;
+  border-radius: 3rem; }
+  .modal__content {
+    margin-bottom: 3.6rem; }
+    .modal__content :last-child {
+      margin-bottom: 0; }
+  .modal__title {
+    margin-bottom: 3rem; }
+  .modal__image-contianer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .modal__image {
+    width: 4.2rem;
+    height: 4.2rem; }
 
 .header {
   width: 100%;

@@ -5,17 +5,13 @@
   justify-content: center;
   margin-bottom: 3rem;
 
-  &:last-of-type {
-    margin-bottom: 6rem;
-  }
-
   &__list-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     align-items: center;
     justify-items: center;
-    grid-column-gap: .6rem;
-    grid-row-gap: .6rem;
+    grid-column-gap: 0.6rem;
+    grid-row-gap: 0.6rem;
 
     &--vertical {
       display: block;
@@ -34,8 +30,17 @@
     max-width: 16rem;
   }
 
+  &__description {
+    padding-bottom: 1.5rem;
+    margin-top: -.8rem;
+  }
+
   &__label {
     padding-bottom: 1.8rem;
+
+    &--secondary {
+        padding-bottom: 1.3rem;
+    }
 
     //Input toggles are checkboxes and radio buttons
     &--toggle {
@@ -90,6 +95,21 @@
     width: 100%;
     border-radius: 2rem;
     padding: 1rem;
+
+    &--secondary {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: $white;
+      border: 0.3rem solid $base-blue;
+      border-radius: .5rem;
+      padding: .6rem;
+      height: 3.8rem;
+    }
+
+    & + .field__input-select-list-options {
+      margin-top: -2.6rem;
+    }
 
     &-search {
       background-image: url("/images/svgs/magnifying-glass.svg");
@@ -166,7 +186,7 @@
 
         &:hover,
         &:focus {
-          background-color: $pale-grey;
+          background-color: $transparent-base-blue;
         }
       }
     }
@@ -176,37 +196,34 @@
       //Hide origional checkbox/radio button
       display: none;
 
-            //Disabled state
-            &:disabled ~ .field__label--toggle { 
-              opacity: .5;
+      //Disabled state
+      &:disabled ~ .field__label--toggle {
+        opacity: 0.5;
 
-              &:hover {
-                cursor: default;
-              }
-            }
+        &:hover {
+          cursor: default;
+        }
+      }
     }
 
     //Checkbox
     &-checkbox {
       //Show checked icon when checked
-      &:checked ~ .field__label--checkbox{
-      
+      &:checked ~ .field__label--checkbox {
         &::before {
           content: url(/images/svgs/checkbox-checked.svg);
         }
-    }
+      }
     }
 
-        //Radio
-        &-radio {
-
-          //Show checked icon when checked
-          &:checked ~ .field__label--radio{
-    
-          &::before {
-            content: url(/images/svgs/radio-checked.svg)
-          }
+    //Radio
+    &-radio {
+      //Show checked icon when checked
+      &:checked ~ .field__label--radio {
+        &::before {
+          content: url(/images/svgs/radio-checked.svg);
         }
-        }
+      }
+    }
   }
 }
