@@ -187,6 +187,15 @@ p {
 .text--pale-grey {
   color: #979797; }
 
+.text--transparent-50-base-blue {
+  color: rgba(37, 60, 120, 0.5); }
+
+.text--small {
+  font-size: 1.4rem; }
+
+.text--large {
+  font-size: 1.8rem; }
+
 .notification-bubble {
   background-color: #f0d275;
   border-radius: 50%;
@@ -222,7 +231,8 @@ p {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  width: 100%; }
   .field__list-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
@@ -240,6 +250,16 @@ p {
     justify-content: flex-start;
     width: 100%;
     max-width: 16rem; }
+  .field__file-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%; }
+    .field__file-list .field {
+      margin-bottom: 1.6rem; }
+    .field__file-list :last-child {
+      margin-bottom: 0; }
   .field__description {
     padding-bottom: 1.5rem;
     margin-top: -.8rem; }
@@ -344,7 +364,7 @@ p {
           padding-top: 2rem;
           height: 8.6rem; }
         .field__input-select-list-option:hover, .field__input-select-list-option:focus {
-          background-color: #253C7833; }
+          background-color: rgba(37, 60, 120, 0.2); }
     .field__input-toggle {
       display: none; }
       .field__input-toggle:disabled ~ .field__label--toggle {
@@ -355,6 +375,21 @@ p {
       content: url(/images/svgs/checkbox-checked.svg); }
     .field__input-radio:checked ~ .field__label--radio::before {
       content: url(/images/svgs/radio-checked.svg); }
+    .field__input-file {
+      background-color: #f6f7ff;
+      border-color: #f6f7ff;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1.5rem 1.9rem 1.5rem 3.5rem; }
+      .field__input-file-delete-button {
+        margin-left: auto;
+        width: 1.9rem;
+        height: 1.9rem;
+        background: none;
+        border: none; }
+        .field__input-file-delete-button:hover {
+          cursor: pointer; }
 
 .button-group {
   display: flex;
@@ -553,6 +588,25 @@ p {
   .modal__image {
     width: 4.2rem;
     height: 4.2rem; }
+
+.file-download-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; }
+
+.file-download-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 4rem 2rem 0;
+  width: 100%;
+  border-bottom: 0.2rem solid rgba(37, 60, 120, 0.5); }
+  .file-download-item:first-of-type {
+    padding-top: 0; }
+
+.file-download__button {
+  margin-left: auto; }
 
 .header {
   width: 100%;

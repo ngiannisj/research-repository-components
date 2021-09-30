@@ -264,13 +264,27 @@ p {
 
 
 
-//Text colour
+//Text modifiers
 .text {
+  //Colours
   &--black {
     color: $black;
   }
 
   &--pale-grey {
     color: $pale-grey;
+  }
+
+  &--transparent-50-base-blue {
+    color: $transparent-50-base-blue;
+  }
+
+  //Sizes
+  &--small {
+    font-size: 1.4rem;
+  }
+
+  &--large {
+    font-size: 1.8rem;
   }
 }

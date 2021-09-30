@@ -421,6 +421,26 @@
       </div>
     </div>
 
+    <div class="field__file-list">
+      <div class="field">
+        <div class="field__input field__input-file">
+          <h4>example_file_item.pdf</h4>
+          <button class="field__input-file-delete-button">
+            <img src="images/svgs/cross.svg" alt="cross" />
+          </button>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="field__input field__input-file">
+          <h4>example_file_item.pdf</h4>
+          <button class="field__input-file-delete-button">
+            <img src="images/svgs/cross.svg" alt="cross" />
+          </button>
+        </div>
+      </div>
+    </div>
+
     <br />
     <br />
     <div class="button-group button-group--small button-group--align-right">
@@ -441,7 +461,7 @@
         </div>
         Button a</a
       >
-      <button class="button">Button b</button>
+      <p class="text--transparent-50-base-blue text--large">PDF, DOC, JPG, PNG, PPT</p>
     </div>
 
     <div class="button-group button-group--vertical">
@@ -625,6 +645,37 @@
     <br />
     <br />
 
+    <div class="file-download-list">
+      <div class="file-download-item">
+        <h4>file_to_download.doc</h4>
+        <a
+          href="#"
+          class="button button--yellow button--small file-download__button"
+          >Button</a
+        >
+      </div>
+
+      <div class="file-download-item">
+        <h4>file_to_download.doc</h4>
+        <a
+          href="#"
+          class="button button--yellow button--small file-download__button"
+          >Button</a
+        >
+      </div>
+
+      <div class="file-download-item">
+        <h4>file_to_download.doc</h4>
+        <a
+          href="#"
+          class="button button--yellow button--small file-download__button"
+          >Button</a
+        >
+      </div>
+    </div>
+    <br />
+    <br />
+
     <!-- Footer -->
     <footer class="footer">
       <div class="footer__nav-links">
@@ -683,51 +734,46 @@
         }
       });
 
-
-
-
       //Stop body scroll when modal is open
 
-
       //Lock focus to modal when modal is open
-      $(document).ready(function() {
-  var findInsiders = function(elem) {
-    
-    var tabbable = elem.find('select, input, textarea, button, a').filter(':visible');
-    
-    var firstTabbable = tabbable.first();
-    var lastTabbable = tabbable.last();
-    /*set focus on first input*/
-    firstTabbable.focus();
+      $(document).ready(function () {
+        var findInsiders = function (elem) {
+          var tabbable = elem
+            .find("select, input, textarea, button, a")
+            .filter(":visible");
 
-    /*redirect last tab to first input*/
-    lastTabbable.on('keydown', function (e) {
-       if ((e.which === 9 && !e.shiftKey)) {
-           e.preventDefault();
-           firstTabbable.focus();
-       }
-    });
+          var firstTabbable = tabbable.first();
+          var lastTabbable = tabbable.last();
+          /*set focus on first input*/
+          firstTabbable.focus();
 
-    /*redirect first shift+tab to last input*/
-    firstTabbable.on('keydown', function (e) {
-        if ((e.which === 9 && e.shiftKey)) {
-            e.preventDefault();
-            lastTabbable.focus();
-        }
-    });
-    
-    /* allow escape key to close insiders div */
-    elem.on('keyup', function(e){
-      if (e.keyCode === 27 ) {
-        elem.hide();
-      };
-    });
-  };
+          /*redirect last tab to first input*/
+          lastTabbable.on("keydown", function (e) {
+            if (e.which === 9 && !e.shiftKey) {
+              e.preventDefault();
+              firstTabbable.focus();
+            }
+          });
 
-    findInsiders($('.modal'));
-  
-  
-});
+          /*redirect first shift+tab to last input*/
+          firstTabbable.on("keydown", function (e) {
+            if (e.which === 9 && e.shiftKey) {
+              e.preventDefault();
+              lastTabbable.focus();
+            }
+          });
+
+          /* allow escape key to close insiders div */
+          elem.on("keyup", function (e) {
+            if (e.keyCode === 27) {
+              elem.hide();
+            }
+          });
+        };
+
+        findInsiders($(".modal"));
+      });
     </script>
   </body>
 </html>

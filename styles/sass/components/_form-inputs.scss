@@ -4,6 +4,7 @@
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 3rem;
+  width: 100%;
 
   &__list-container {
     display: grid;
@@ -28,6 +29,22 @@
     justify-content: flex-start;
     width: 100%;
     max-width: 16rem;
+  }
+
+  &__file-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+
+    .field {
+      margin-bottom: 1.6rem;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__description {
@@ -186,7 +203,7 @@
 
         &:hover,
         &:focus {
-          background-color: $transparent-base-blue;
+          background-color: $transparent-20-base-blue;
         }
       }
     }
@@ -222,6 +239,28 @@
       &:checked ~ .field__label--radio {
         &::before {
           content: url(/images/svgs/radio-checked.svg);
+        }
+      }
+    }
+
+    //File
+    &-file {
+      background-color: $pale-blue;
+      border-color: $pale-blue;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1.5rem 1.9rem 1.5rem 3.5rem;
+
+      &-delete-button {
+        margin-left: auto;
+        width: 1.9rem;
+        height: 1.9rem;
+        background: none;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
         }
       }
     }
