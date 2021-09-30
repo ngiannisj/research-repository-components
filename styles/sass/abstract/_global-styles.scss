@@ -1,0 +1,11 @@
+* {
+    &:focus {
+       outline: .3rem solid $purple;
+    }
+
+    &:disabled, &.disabled {
+        opacity: .5;
+        cursor: default;
+        pointer-events: none;  
+    }
+}

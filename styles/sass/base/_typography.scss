@@ -3,9 +3,27 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   letter-spacing: 0rem;
-  line-height: 2.4rem;
-  color: $black;
+  line-height: 2.1rem;
+  color: $base-blue;
   font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  color: $base-blue;
+}
+
+p {
+  &.paragraph--black {
+    color: $black;
+  }
+}
+
+//General modifiers
+.faded {
+  opacity: .7;
 }
 
 //Header
@@ -116,4 +134,94 @@ body {
       }
     }
   }
+}
+
+//Button
+.button {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
+
+  //Sizes
+  &--small {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+  //Colours
+  &--yellow {
+    color: $base-blue;
+  }
+
+  //Secondary
+  &--secondary {
+    color: $base-blue;
+
+    &:hover {
+      color: $white;
+    }
+
+    //Colours
+    &.button {
+      &--yellow {
+        &:hover {
+          color: $base-blue;
+        }
+      }
+
+      &--green {
+        color: $base-green;
+
+        &:hover {
+          color: $white;
+        }
+      }
+
+      &--red {
+        color: $base-red;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+//Link
+.link {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: $base-blue;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &--green {
+    color: $base-green;
+  }
+
+  &--red {
+    color: $base-red;
+  }
+}
+
+//Pathway card
+.pathway-card {
+  text-decoration: none;
+
+  &:visited {
+    color: initial;
+  }
+}
+
+.pill {
+  color: $base-blue;
 }

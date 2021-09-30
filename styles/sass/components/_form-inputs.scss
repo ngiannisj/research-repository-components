@@ -14,8 +14,8 @@
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     align-items: center;
     justify-items: center;
-    grid-column-gap: 6px;
-    grid-row-gap: 6px;
+    grid-column-gap: .6rem;
+    grid-row-gap: .6rem;
 
     &--vertical {
       display: block;

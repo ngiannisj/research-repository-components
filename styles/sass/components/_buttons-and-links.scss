@@ -1,0 +1,127 @@
+//Button group
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .button, .link {
+        margin-right: 6.8rem;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &--small {
+        .button, .link {
+            margin-right: 4rem;
+        }
+    }
+
+    &--vertical {
+        flex-direction: column;
+        .button, .link {
+            margin: 0 0 4rem 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &.button-group--small {
+            .button, .link {
+                margin: 0 0 2.4rem 0;
+            }
+        }
+    }
+
+    &--align-right {
+        justify-content: flex-end;
+    }
+
+}
+
+//Button
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:fit-content;
+  padding: 1.3rem 7.5rem;
+  background-color: $base-blue;
+  border: 0.3rem solid $base-blue;
+  border-radius: 5rem;
+  transition: transform 0.3s ease 0s, background-color 0.3s ease 0s, box-shadow 0.3s ease 0s, outline 0s;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 30%);
+    transform: translateY(-.7rem);
+  }
+
+  //Sizes
+  &--small {
+    padding: 0.8rem 3.3rem;
+  }
+
+  //Colours
+  &--yellow {
+    background-color: $base-yellow;
+    border-color: $base-yellow;
+  }
+
+  &--green {
+    background-color: $base-green;
+    border-color: $base-green;
+  }
+
+  &--red {
+    background-color: $base-red;
+    border-color: $base-red;
+  }
+
+  //Secondary
+  &--secondary {
+    background-color: $white;
+
+    &:hover {
+      background-color: $base-blue;
+      box-shadow: none;
+      transform: none;
+    }
+
+    //Colours
+    &.button {
+
+      &--yellow {
+        &:hover {
+          background-color: $base-yellow;
+        }
+      }
+
+      &--green {
+        &:hover {
+          background-color: $base-green;
+        }
+      }
+
+      &--red {
+        &:hover {
+          background-color: $base-red;
+        }
+      }
+
+    }
+  }
+
+  &__image {
+      width: 2.2rem;
+      height: 2.5rem;
+      margin-right: 1.2rem;
+  }
+}
+
+//Link
+.link {
+background: none;
+border: none;
+}
