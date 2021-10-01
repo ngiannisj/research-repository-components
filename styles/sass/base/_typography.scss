@@ -41,7 +41,7 @@ h4 {
 h5 {
   font-size: 1.8rem;
   line-height: 2.4rem;
-font-weight: 400;
+  font-weight: 400;
   color: $base-blue;
 }
 
@@ -163,7 +163,6 @@ ul {
       font-weight: 400;
       line-height: 2.4rem;
     }
-
   }
 
   &__input {
@@ -271,7 +270,7 @@ ul {
 }
 
 //Pathway card
-.pathway-card {
+.card {
   text-decoration: none;
 
   &:visited {
@@ -284,22 +283,19 @@ ul {
 }
 
 .accordion {
-
   &__button {
-
     &:hover {
       .accordion__title {
         text-decoration: underline;
       }
     }
   }
-  
-  &__content {
 
+  &__content {
     &--minimal {
       li a {
         text-decoration: underline;
-    
+
         &:hover {
           font-weight: 600;
         }
@@ -317,11 +313,41 @@ ul {
   }
 }
 
+//Pagination
+.pagination {
+  &__container {
 
+    ul {
+      list-style-type: none;
+    }
+  }
 
+  &__button {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    font-weight: 400;
+    color: $base-blue;
 
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
 
+    &--active {
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+}
 
+//User details
+.user-details {
+  &__title {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 6rem;
+  }
+}
 
 //Text modifiers
 .text {
@@ -341,12 +367,26 @@ ul {
   &--transparent-70-base-blue {
     color: $transparent-70-base-blue;
   }
+
   //Sizes
   &--small {
     font-size: 1.4rem;
   }
 
+  &--medium {
+    font-size: 1.6rem;
+  }
+
   &--large {
     font-size: 1.8rem;
+  }
+
+  //Weights
+  &--normal {
+    font-weight: 400;
+  }
+
+  &--semibold {
+    font-weight: 600;
   }
 }
