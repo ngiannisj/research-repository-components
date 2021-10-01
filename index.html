@@ -109,6 +109,7 @@
         class="field__input field__input-search"
         name="fname"
         value=""
+        placeholder="Search the Library..."
       />
     </div>
 
@@ -137,30 +138,32 @@
     <!-- Select list -->
     <div class="field">
       <label for="fname" class="field__label">First name:</label>
-      <div class="field__input-select-list">
+      <div class="accordion__container accordion__container--select-list">
         <button
-          onclick="toggleDropdown(this)"
-          class="field__input field__input-select-list-btn"
+          class="
+            field__input
+            accordion accordion__button accordion accordion__button--select-list
+          "
           data-selected=""
         ></button>
-        <div class="field__input-select-list-options">
+        <div class="accordion__content accordion__content--select-list">
           <button
             onclick="selectListOptionClick(this)"
-            class="field__input-select-list-option"
+            class="accordion__content-option"
             data-value="1"
           >
             Home
           </button>
           <button
             onclick="selectListOptionClick(this)"
-            class="field__input-select-list-option"
+            class="accordion__content-option"
             data-value="2"
           >
             About
           </button>
           <button
             onclick="selectListOptionClick(this)"
-            class="field__input-select-list-option"
+            class="accordion__content-option"
             data-value="3"
           >
             Contact
@@ -188,6 +191,7 @@
             field__label--checkbox
           "
           tabindex="0"
+          role="button"
         >
           I have a bike
         </label>
@@ -210,6 +214,7 @@
             field__label--checkbox
           "
           tabindex="0"
+          role="button"
         >
           tag
         </label>
@@ -232,6 +237,7 @@
             field__label--checkbox
           "
           tabindex="0"
+          role="button"
         >
           I have a boat
         </label>
@@ -254,6 +260,7 @@
             field__label--checkbox
           "
           tabindex="0"
+          role="button"
         >
           I have a boat
         </label>
@@ -276,6 +283,7 @@
             field__label--checkbox
           "
           tabindex="0"
+          role="button"
         >
           I have a boat
         </label>
@@ -298,6 +306,7 @@
             field__label--checkbox
           "
           tabindex="0"
+          role="button"
         >
           I have a boat
         </label>
@@ -320,6 +329,7 @@
             field__label--checkbox
           "
           tabindex="0"
+          role="button"
         >
           I have a boat
         </label>
@@ -343,6 +353,7 @@
             field__label--checkbox
           "
           tabindex="0"
+          role="button"
         >
           I have a boat
         </label>
@@ -371,6 +382,7 @@
             field__label--radio
           "
           tabindex="0"
+          role="button"
         >
           I have a bike
         </label>
@@ -393,6 +405,7 @@
             field__label--radio
           "
           tabindex="0"
+          role="button"
         >
           tag
         </label>
@@ -415,6 +428,7 @@
             field__label--radio
           "
           tabindex="0"
+          role="button"
         >
           I have a boat
         </label>
@@ -425,8 +439,8 @@
       <div class="field">
         <div class="field__input field__input-file">
           <h4>example_file_item.pdf</h4>
-          <button class="field__input-file-delete-button">
-            <img src="images/svgs/cross.svg" alt="cross" />
+          <button class="button--icon button--icon-delete align-right">
+            <img src="images/svgs/cross.svg" alt="remove_file" />
           </button>
         </div>
       </div>
@@ -434,8 +448,8 @@
       <div class="field">
         <div class="field__input field__input-file">
           <h4>example_file_item.pdf</h4>
-          <button class="field__input-file-delete-button">
-            <img src="images/svgs/cross.svg" alt="cross" />
+          <button class="button--icon button--icon-delete align-right">
+            <img src="images/svgs/cross.svg" alt="remove_file" />
           </button>
         </div>
       </div>
@@ -443,9 +457,11 @@
 
     <br />
     <br />
-    <div class="button-group button-group--small button-group--align-right">
+
+    <!-- File download list -->
+    <div class="button-group button-group--small align-right">
       <a href="#" class="button button--small button--secondary button--yellow">
-        <div class="button__image">
+        <div class="button__icon">
           <svg
             width="23"
             height="25"
@@ -461,7 +477,9 @@
         </div>
         Button a</a
       >
-      <p class="text--transparent-50-base-blue text--large">PDF, DOC, JPG, PNG, PPT</p>
+      <p class="text--transparent-50-base-blue text--large">
+        PDF, DOC, JPG, PNG, PPT
+      </p>
     </div>
 
     <div class="button-group button-group--vertical">
@@ -493,7 +511,9 @@
       <a href="#" class="pathway-card">
         <div class="pathway-card__heading-container">
           <h4 class="pathway-card__heading">Experiencing a natural disaster</h4>
-          <h4 class="pathway-card__subheading text--transparent-70-base-blue">GovX</h4>
+          <h4 class="pathway-card__subheading text--transparent-70-base-blue">
+            GovX
+          </h4>
         </div>
 
         <div class="pathway-card__description-container">
@@ -535,7 +555,9 @@
       <a href="#" class="pathway-card pathway-card--hero pathway-card--yellow">
         <div class="pathway-card__heading-container">
           <h4 class="pathway-card__heading">Experiencing a natural disaster</h4>
-          <h4 class="pathway-card__subheading text--transparent-70-base-blue">GovX</h4>
+          <h4 class="pathway-card__subheading text--transparent-70-base-blue">
+            GovX
+          </h4>
         </div>
 
         <div class="pathway-card__description-container">
@@ -546,9 +568,9 @@
           </p>
         </div>
 
-        <div class="pathway-card__arrow-image-container">
+        <div class="pathway-card__arrow-icon-container">
           <svg
-            class="pathway-card__arrow-image"
+            class="pathway-card__arrow-icon"
             width="31"
             height="31"
             viewBox="0 0 31 31"
@@ -600,11 +622,10 @@
             >
             <div class="field__input-select-list">
               <button
-                onclick="toggleDropdown(this)"
                 class="
                   field__input
                   field__input--secondary
-                  field__input-select-list-btn
+                  field__input-select-list-button
                 "
                 data-selected=""
               ></button>
@@ -635,7 +656,7 @@
           </div>
         </div>
 
-        <div class="button-group button-group--small button-group--align-right">
+        <div class="button-group button-group--small align-right">
           <a href="#" class="link link--red"> Button </a>
           <button class="button button--small">Button</button>
         </div>
@@ -645,6 +666,7 @@
     <br />
     <br />
 
+    <!-- File download list -->
     <div class="file-download-list">
       <div class="file-download-item">
         <h4>file_to_download.doc</h4>
@@ -673,6 +695,138 @@
         >
       </div>
     </div>
+
+    <br />
+    <br />
+
+    <!-- Filters sidebar -->
+    <div class="sidebar-filters">
+      <div class="sidebar-filters__content-container">
+        <h4 class="sidebar-filters__title">Filter items</h4>
+
+        <div class="field">
+          <input
+            type="text"
+            id="fname"
+            class="
+              field__input
+              field__input-search
+              field__input
+              field__input-search--small
+            "
+            name="fname"
+            value=""
+            placeholder="Search the Library..."
+          />
+        </div>
+      </div>
+
+      <div class="accordion-list">
+        <div class="accordion__container accordion__container--filter">
+          <button class="accordion accordion__button accordion__button--filter">
+            <h5 class="accordion__title">Tags</h5>
+          </button>
+          <div class="accordion__content--filter accordion__content">
+            <div class="field__list-container field__list-container">
+              <div class="field__list-item">
+                <input
+                  type="checkbox"
+                  id="checkbox-1"
+                  name="checkbox-1"
+                  class="field__input-toggle field__input-checkbox"
+                  value="Bike"
+                />
+                <label
+                  for="checkbox-1"
+                  class="
+                    field__label
+                    field__label--extra-small
+                    field__label--toggle
+                    field__label--checkbox
+                  "
+                  tabindex="0"
+                  role="button"
+                >
+                  I have a bike
+                </label>
+              </div>
+
+              <div class="field__list-item">
+                <input
+                  type="checkbox"
+                  id="checkbox-2"
+                  name="checkbox-2"
+                  class="field__input-toggle field__input-checkbox"
+                  value="Car"
+                />
+                <label
+                  for="checkbox-2"
+                  class="
+                    field__label
+                    field__label--extra-small
+                    field__label--toggle
+                    field__label--checkbox
+                  "
+                  tabindex="0"
+                  role="button"
+                >
+                  tag
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-filters__content-container button-group">
+        <button class="link">Clear filters</button>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <!-- Minimal accordion -->
+    <div class="accordion-list">
+      <div class="accordion__container accordion__container--minimal">
+        <button class="accordion accordion__button accordion__button--minimal">
+          <h4 class="accordion__title">Tags</h4>
+        </button>
+        <div class="accordion__content--minimal accordion__content">
+          <ul>
+            <li><a href="#">List item 1</a></li>
+            <li><a href="#">List item 2</a></li>
+            <li><a href="#">List item 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <!-- Complex accordion -->
+    <div class="accordion-list">
+      <div class="accordion__container accordion__container--complex">
+        <div
+          class="accordion accordion__button accordion__button--complex"
+          tabindex="0"
+          role="button"
+        >
+          <button class="button--icon button--icon-delete">
+            <img src="images/svgs/cross.svg" alt="delete_theme" />
+          </button>
+          <h4 class="accordion__title">Theme</h4>
+          <button class="button--icon button--icon-edit">
+            <img src="images/svgs/pencil.svg" alt="edit_theme_name" />
+          </button>
+          <button class="button--icon button--icon-confirm">
+            <img src="images/svgs/tick.svg" alt="save_theme_name" />
+          </button>
+        </div>
+        <div class="accordion__content--complex accordion__content"></div>
+      </div>
+    </div>
+
     <br />
     <br />
 
@@ -692,47 +846,62 @@
     </footer>
 
     <script>
-      //Custom dropdown functionality
-      /* When the user clicks on the button, 
-      toggle between hiding and showing the dropdown content */
-      function toggleDropdown($this) {
-        $($this)
-          .next(".field__input-select-list-options")
-          .toggleClass("field__input-select-list-options--active");
-        $($this).toggleClass("field__input-select-list-btn--active");
-      }
+      //Accordion
 
+      //Stops accordion from opening if a button inside the accordion button is clicked
+      $(".accordion__button .button--icon").click(function () {
+        event.stopPropagation();
+      });
+
+      //Basic accordion functionality
+      $(".accordion").click(function () {
+        $(this).toggleClass("accordion--active");
+        if ($(this).hasClass("accordion--active")) {
+          $(this).next(".accordion__content").slideDown();
+        } else {
+          $(this).next(".accordion__content").slideUp();
+        }
+      });
+
+      //Selectlist accordion functionality
       function selectListOptionClick($this) {
         $($this)
-          .closest(".field__input-select-list")
-          .find(".field__input-select-list-btn")
+          .closest(".accordion__container--select-list")
+          .find(".accordion__button--select-list")
           .first()
           .attr("data-selected", $($this).data("value"));
         $($this)
-          .closest(".field__input-select-list")
-          .find(".field__input-select-list-btn")
+          .closest(".accordion__container--select-list")
+          .find(".accordion__button--select-list")
           .first()
           .html($($this).text());
       }
 
-      // Close the dropdown if the user clicks outside of it
+      // Close the accordion if the user clicks outside of selectlist
       $(window).click(function (event) {
-        if (!event.target.matches(".field__input-select-list-btn")) {
-          const selectListOptions = $(".field__input-select-list-options");
-          const selectListBtns = $(".field__input-select-list-btn");
+        if (!event.target.matches(".accordion__button--select-list")) {
+          const selectListOptions = $(".accordion__content-select-list");
+          const selectListBtns = $(".accordion__button--select-list");
           let i;
-          for (i = 0; i < selectListOptions.length; i++) {
-            $(selectListOptions[i]).removeClass(
-              "field__input-select-list-options--active"
-            );
-          }
           for (i = 0; i < selectListBtns.length; i++) {
-            $(selectListBtns[i]).removeClass(
-              "field__input-select-list-btn--active"
-            );
+            $(selectListBtns[i]).removeClass("accordion--active");
+            $(selectListBtns[i]).next(".accordion__content").slideUp();
           }
         }
       });
+
+      //Accordion focus on accordion button parent container
+      $(".accordion__button").focus(function () {
+        $(this).closest(".accordion__container").addClass("focus");
+      });
+
+      $(".accordion__button").blur(function () {
+        $(this).closest(".accordion__container").removeClass("focus");
+      });
+
+      //=========================================================================
+
+      //Modal
 
       //Stop body scroll when modal is open
 

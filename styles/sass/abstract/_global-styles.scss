@@ -1,11 +1,26 @@
 * {
-    &:focus {
-       outline: .3rem solid $purple;
-    }
+  &:focus {
+    outline: 0.3rem solid $purple;
+    z-index: 99;
+  }
 
-    &:disabled, &.disabled {
-        opacity: .5;
-        cursor: default;
-        pointer-events: none;  
-    }
+  &:disabled,
+  &.disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+//To simulate focus
+.focus {
+  outline: 0.3rem solid $purple;
+  z-index: 99;
+}
+
+.align {
+  &-right {
+      margin-left: auto !important;
+      justify-content: flex-end !important;
+  }
 }

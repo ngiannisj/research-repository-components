@@ -37,11 +37,23 @@ h4 {
   color: $base-blue;
 }
 
+//Component sub-titles
+h5 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+font-weight: 400;
+  color: $base-blue;
+}
+
 p {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.1rem;
   color: $base-blue;
+}
+
+ul {
+  padding-left: 4rem;
 }
 
 //General modifiers
@@ -76,8 +88,7 @@ p {
       color: $white;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       text-decoration: underline;
       color: $white;
     }
@@ -90,9 +101,12 @@ p {
     color: $white;
     text-decoration: underline;
 
-    &:hover,
-    &:focus {
+    &:hover {
       font-weight: 600;
+    }
+
+    &:visited {
+      color: $white;
     }
   }
 
@@ -116,8 +130,7 @@ p {
   color: $grey;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $base-blue;
     font-weight: 600;
   }
@@ -145,6 +158,12 @@ p {
       font-weight: 400;
       line-height: 2.7rem;
     }
+    &--extra-small {
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+    }
+
   }
 
   &__input {
@@ -153,11 +172,17 @@ p {
     line-height: 2.7rem;
     color: $base-blue;
 
-    &-select-list {
-      &-option {
-        font-size: 1.8rem;
-        line-height: 2.7rem;
+    &-search {
+      &::placeholder {
         color: $base-blue;
+      }
+
+      &--small {
+        font-size: 1.4rem;
+
+        &::placeholder {
+          font-size: 1.4rem;
+        }
       }
     }
   }
@@ -256,6 +281,40 @@ p {
 
 .pill {
   color: $base-blue;
+}
+
+.accordion {
+
+  &__button {
+
+    &:hover {
+      .accordion__title {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  &__content {
+
+    &--minimal {
+      li a {
+        text-decoration: underline;
+    
+        &:hover {
+          font-weight: 600;
+        }
+
+        &:visited {
+          color: $base-blue;
+        }
+      }
+    }
+    &-option {
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+      color: $base-blue;
+    }
+  }
 }
 
 
