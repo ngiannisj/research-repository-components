@@ -1,6 +1,16 @@
 .header {
   width: 100%;
+  height:fit-content;
   background-color: $base-blue;
+  border-bottom: 0.8rem solid $base-yellow;
+  margin-bottom: 5.5rem;
+  display: grid;
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14.4rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+
+  &__content {
+    margin-bottom: -.8rem;
+      grid-column: center-start / center-end;
+  }
 
   &__header-top {
     padding: 4.8rem 0;

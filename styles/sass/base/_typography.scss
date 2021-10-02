@@ -218,7 +218,7 @@ ul {
     //Colours
     &.button {
       &--yellow {
-        &:hover {
+        &:hover, &.button--active {
           color: $base-blue;
         }
       }
@@ -226,7 +226,7 @@ ul {
       &--green {
         color: $base-green;
 
-        &:hover {
+        &:hover, &.button--active {
           color: $white;
         }
       }
@@ -234,7 +234,7 @@ ul {
       &--red {
         color: $base-red;
 
-        &:hover {
+        &:hover, &.button--active {
           color: $white;
         }
       }
@@ -316,7 +316,6 @@ ul {
 //Pagination
 .pagination {
   &__container {
-
     ul {
       list-style-type: none;
     }

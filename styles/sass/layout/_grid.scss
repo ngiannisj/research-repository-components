@@ -1,0 +1,47 @@
+.grid {
+  display: grid;
+  min-height: 100vh;
+  width: 100%;
+  grid-auto-rows: min-content auto min-content;
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14.4rem) [col-end]
+    ) [center-end] minmax(2rem, 1fr) [full-end];
+
+  &--sidebar {
+    grid-auto-rows: min-content min-content auto min-content;
+    grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(
+        21,
+        [col-start] minmax(min-content, 5.5rem) [col-end]
+      ) [center-end] minmax(2rem, 1fr) [full-end];
+
+      &-pagination {
+        grid-auto-rows: min-content min-content min-content auto min-content; //Ensures last row in grid leaves space between itself and the footer
+      }
+  }
+
+  &-column {
+
+    &-main {
+      grid-column: center-start / center-end;
+      width: 100%;
+      &--full-width {
+        grid-column: full-start / full-end;
+      }
+
+      &--half-width {
+        grid-column: center-start / col-end 4;
+      }
+
+      &--with-sidebar {
+        grid-column: col-start 8 / center-end;
+      }
+    }
+
+    &-sidebar {
+      grid-column: center-start / col-end 6;
+      width: 100%;
+    }
+
+  }
+}

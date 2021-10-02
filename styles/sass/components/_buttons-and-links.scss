@@ -2,7 +2,12 @@
 .button-group {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-bottom: 3rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   .button,
   .link {
@@ -16,7 +21,7 @@
   &--small {
     .button,
     .link {
-      margin-right: 4rem;
+      margin-right: 1.6rem;
     }
   }
 
@@ -45,7 +50,7 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: 1.3rem 7.5rem;
+  padding: 1.3rem 4.5rem;
   background-color: $base-blue;
   border: 0.3rem solid $base-blue;
   border-radius: 5rem;
@@ -61,7 +66,7 @@
 
   //Sizes
   &--small {
-    padding: 0.8rem 3.3rem;
+    padding: 0.8rem 2.2rem;
   }
 
   //Colours
@@ -94,19 +99,19 @@
     //Colours
     &.button {
       &--yellow {
-        &:hover {
+        &:hover, &.button--active {
           background-color: $base-yellow;
         }
       }
 
       &--green {
-        &:hover {
+        &:hover, &.button--active {
           background-color: $base-green;
         }
       }
 
       &--red {
-        &:hover {
+        &:hover, &.button--active {
           background-color: $base-red;
         }
       }

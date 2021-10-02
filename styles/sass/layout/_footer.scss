@@ -1,8 +1,17 @@
 .footer {
   width: 100%;
+  height:fit-content;
   background-color: $base-blue;
-  border-top: 0.8rem solid $base-yellow;
+  border-top: 0.4rem solid $base-yellow;
   padding: 4.8rem 0;
+  margin-top: 5.5rem;
+  align-self: end;
+  display: grid;
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14.4rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+
+  &__content {
+      grid-column: center-start / center-end;
+  }
 
   &__footer-top {
     padding: 4.8rem 0;

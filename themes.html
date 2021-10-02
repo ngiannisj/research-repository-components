@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>A Basic HTML5 Template</title>
+    <meta
+      name="description"
+      content="A simple HTML5 Template for new projects."
+    />
+    <meta name="author" content="Nathan Giannis" />
+
+    <meta property="og:title" content="Research repository components" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="CSS/JS/Html for research repository compnonets"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/css/style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Scripts -->
+    <script src="scripts/javascript.js"></script>
+  </head>
+
+  <body>
+    <div class="grid grid--sidebar">
+      <!-- Header -->
+      <header class="header grid-column-main--full-width">
+        <div class="header__content">
+          <div class="header__header-top">
+            <a href="#" class="header__logo-link">
+              <div class="header__logo-image-container">
+                <img
+                  class="header__logo-image"
+                  src="images/pngs/aus_gov_logo.png"
+                  alt="australian_government_logo"
+                />
+              </div>
+              <div class="header__logo-text-container">
+                <h1 class="header__logo-text-heading site-heading">
+                  Research Repository
+                </h1>
+                <h2 class="header__logo-text-subheading site-subheading">
+                  All your reserch in one place.
+                </h2>
+              </div>
+            </a>
+          </div>
+          <div class="header__header-bottom">
+            <nav class="header__navbar">
+              <a class="header__nav-link header__nav-link--active" href="#">
+                Home
+              </a>
+              <a class="header__nav-link" href="#"> Library </a>
+              <a class="header__nav-link" href="#"> Contribute </a>
+              <a class="header__nav-link" href="#"> Login </a>
+              <a class="header__nav-link" href="#"> Logout </a>
+              <div class="header__nav-link--align-right">
+                <a class="header__nav-link" href="#"> Librarian Portal </a>
+                <a class="header__nav-link" href="#"> Profile </a>
+                <span
+                  class="
+                    notification-bubble notification-bubble__header-notification
+                  "
+                  >4</span
+                >
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- Sidebar -->
+      <div class="grid-column-sidebar">
+        <!-- Sidebar nav -->
+        <div class="sidebar-nav">
+          <a
+            href="#"
+            class="sidebar-nav__nav-link sidebar-nav__nav-link--active"
+            >Requests<span
+              class="
+                notification-bubble notification-bubble__side-nav-notification
+              "
+              >4</span
+            ></a
+          >
+          <a href="#" class="sidebar-nav__nav-link">Teams and projects</a>
+          <a href="#" class="sidebar-nav__nav-link">Themes and tags</a>
+        </div>
+      </div>
+
+      <!-- grid-column-main -->
+      <div class="grid-column-main--with-sidebar">
+        <h2 class="margin-bottom--medium">Your research items</h2>
+        <div class="button-group button-group--small margin-bottom--medium">
+          <button class="button button--yellow">Add/Edit themes</button>
+          <button class="button button--yellow">Add/Edit tags</button>
+        </div>
+
+        <!-- Complex accordion -->
+        <div class="accordion-list">
+          <div class="accordion__container accordion__container--complex">
+            <div
+              class="accordion accordion__button accordion__button--complex"
+              tabindex="0"
+              role="button"
+            >
+              <button class="button--icon button--icon-delete">
+                <img src="images/svgs/cross.svg" alt="delete_theme" />
+              </button>
+              <h4 class="accordion__title">Theme</h4>
+              <button class="button--icon button--icon-edit">
+                <img src="images/svgs/pencil.svg" alt="edit_theme_name" />
+              </button>
+              <button class="button--icon button--icon-confirm">
+                <img src="images/svgs/tick.svg" alt="save_theme_name" />
+              </button>
+            </div>
+            <div class="accordion__content--complex accordion__content">
+              <div class="field__list-container">
+                <div class="field__list-item">
+                  <input
+                    type="checkbox"
+                    id="checkbox-1"
+                    name="checkbox-1"
+                    class="field__input-toggle field__input-checkbox"
+                    value="Bike"
+                  />
+                  <label
+                    for="checkbox-1"
+                    class="
+                      field__label
+                      field__label--small
+                      field__label--toggle
+                      field__label--checkbox
+                    "
+                    tabindex="0"
+                    role="button"
+                  >
+                    I have a bike
+                  </label>
+                </div>
+
+                <div class="field__list-item">
+                  <input
+                    type="checkbox"
+                    id="checkbox-1"
+                    name="checkbox-1"
+                    class="field__input-toggle field__input-checkbox"
+                    value="Bike"
+                  />
+                  <label
+                    for="checkbox-1"
+                    class="
+                      field__label
+                      field__label--small
+                      field__label--toggle
+                      field__label--checkbox
+                    "
+                    tabindex="0"
+                    role="button"
+                  >
+                    I have a bike
+                  </label>
+                </div>
+
+                <div class="field__list-item">
+                  <input
+                    type="checkbox"
+                    id="checkbox-1"
+                    name="checkbox-1"
+                    class="field__input-toggle field__input-checkbox"
+                    value="Bike"
+                  />
+                  <label
+                    for="checkbox-1"
+                    class="
+                      field__label
+                      field__label--small
+                      field__label--toggle
+                      field__label--checkbox
+                    "
+                    tabindex="0"
+                    role="button"
+                  >
+                    I have a bike
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__container accordion__container--complex">
+            <div
+              class="accordion accordion__button accordion__button--complex"
+              tabindex="0"
+              role="button"
+            >
+              <button class="button--icon button--icon-delete">
+                <img src="images/svgs/cross.svg" alt="delete_theme" />
+              </button>
+              <h4 class="accordion__title">Theme</h4>
+              <button class="button--icon button--icon-edit">
+                <img src="images/svgs/pencil.svg" alt="edit_theme_name" />
+              </button>
+              <button class="button--icon button--icon-confirm">
+                <img src="images/svgs/tick.svg" alt="save_theme_name" />
+              </button>
+            </div>
+            <div class="accordion__content--complex accordion__content"></div>
+          </div>
+
+          <div class="accordion__container accordion__container--complex">
+            <div
+              class="accordion accordion__button accordion__button--complex"
+              tabindex="0"
+              role="button"
+            >
+              <button class="button--icon button--icon-delete">
+                <img src="images/svgs/cross.svg" alt="delete_theme" />
+              </button>
+              <h4 class="accordion__title">Theme</h4>
+              <button class="button--icon button--icon-edit">
+                <img src="images/svgs/pencil.svg" alt="edit_theme_name" />
+              </button>
+              <button class="button--icon button--icon-confirm">
+                <img src="images/svgs/tick.svg" alt="save_theme_name" />
+              </button>
+            </div>
+            <div class="accordion__content--complex accordion__content"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+
+      <!-- Footer -->
+      <footer class="footer grid-column-main--full-width">
+        <div class="footer__content">
+          <div class="footer__nav-links">
+            <a class="footer__nav-link" href="#"> Privacy </a>
+            <a class="footer__nav-link" href="#"> Need help? </a>
+            <a class="footer__nav-link" href="#"> Accessibility </a>
+            <a class="footer__nav-link" href="#"> Disclaimer </a>
+          </div>
+          <div class="footer__footer-bottom">
+            <span class="footer__copyright-disclaimer"
+              >&copy; Commonwealth of Australia</span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

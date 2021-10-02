@@ -1,6 +1,7 @@
 * {
   &:focus {
     outline: 0.3rem solid $purple;
+    position: relative;
     z-index: 99;
   }
 
@@ -15,12 +16,39 @@
 //To simulate focus
 .focus {
   outline: 0.3rem solid $purple;
+  position: relative;
   z-index: 99;
 }
 
 .align {
   &-right {
-      margin-left: auto !important;
-      justify-content: flex-end !important;
+    margin-left: auto !important;
+    justify-content: flex-end !important;
+  }
+
+  &-center {
+    margin: 0 auto;
+    justify-content: center !important;
   }
 }
+
+  //Margin
+  .margin {
+    &-bottom {
+      &--large {
+        margin-bottom: 6rem;
+      }
+
+      &--medium {
+        margin-bottom: 3rem;
+      }
+
+      &--small {
+        margin-bottom: 1.6rem;
+      }
+
+      &--extra-small {
+        margin-bottom: .8rem;
+      }
+    }
+  }

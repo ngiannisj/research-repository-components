@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>A Basic HTML5 Template</title>
+    <meta
+      name="description"
+      content="A simple HTML5 Template for new projects."
+    />
+    <meta name="author" content="Nathan Giannis" />
+
+    <meta property="og:title" content="Research repository components" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="CSS/JS/Html for research repository compnonets"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/css/style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Scripts -->
+    <script src="scripts/javascript.js"></script>
+  </head>
+
+  <body>
+    <div class="grid grid--sidebar grid--sidebar-paginated">
+      <!-- Header -->
+      <header class="header grid-column-main--full-width">
+        <div class="header__content">
+          <div class="header__header-top">
+            <a href="#" class="header__logo-link">
+              <div class="header__logo-image-container">
+                <img
+                  class="header__logo-image"
+                  src="images/pngs/aus_gov_logo.png"
+                  alt="australian_government_logo"
+                />
+              </div>
+              <div class="header__logo-text-container">
+                <h1 class="header__logo-text-heading site-heading">
+                  Research Repository
+                </h1>
+                <h2 class="header__logo-text-subheading site-subheading">
+                  All your reserch in one place.
+                </h2>
+              </div>
+            </a>
+          </div>
+          <div class="header__header-bottom">
+            <nav class="header__navbar">
+              <a class="header__nav-link header__nav-link--active" href="#">
+                Home
+              </a>
+              <a class="header__nav-link" href="#"> Library </a>
+              <a class="header__nav-link" href="#"> Contribute </a>
+              <a class="header__nav-link" href="#"> Login </a>
+              <a class="header__nav-link" href="#"> Logout </a>
+              <div class="header__nav-link--align-right">
+                <a class="header__nav-link" href="#"> Librarian Portal </a>
+                <a class="header__nav-link" href="#"> Profile </a>
+                <span
+                  class="
+                    notification-bubble notification-bubble__header-notification
+                  "
+                  >4</span
+                >
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- Sidebar -->
+      <div class="grid-column-sidebar">
+        <div class="sidebar-filters">
+          <div class="sidebar-filters__content-container">
+            <h4 class="sidebar-filters__title">Filter items</h4>
+
+            <div class="field">
+              <input
+                type="text"
+                id="fname"
+                class="
+                  field__input
+                  field__input-search
+                  field__input
+                  field__input-search--small
+                "
+                name="fname"
+                value=""
+                placeholder="Search the Library..."
+              />
+            </div>
+          </div>
+
+          <div class="accordion-list">
+            <div class="accordion__container accordion__container--filter">
+              <button
+                class="accordion accordion__button accordion__button--filter"
+              >
+                <h5 class="accordion__title">Tags</h5>
+              </button>
+              <div class="accordion__content--filter accordion__content">
+                <div class="field__list-container field__list-container">
+                  <div class="field__list-item">
+                    <input
+                      type="checkbox"
+                      id="checkbox-1"
+                      name="checkbox-1"
+                      class="field__input-toggle field__input-checkbox"
+                      value="Bike"
+                    />
+                    <label
+                      for="checkbox-1"
+                      class="
+                        field__label
+                        field__label--extra-small
+                        field__label--toggle
+                        field__label--checkbox
+                      "
+                      tabindex="0"
+                      role="button"
+                    >
+                      I have a bike
+                    </label>
+                  </div>
+
+                  <div class="field__list-item">
+                    <input
+                      type="checkbox"
+                      id="checkbox-1"
+                      name="checkbox-1"
+                      class="field__input-toggle field__input-checkbox"
+                      value="Bike"
+                    />
+                    <label
+                      for="checkbox-1"
+                      class="
+                        field__label
+                        field__label--extra-small
+                        field__label--toggle
+                        field__label--checkbox
+                      "
+                      tabindex="0"
+                      role="button"
+                    >
+                      I have a bike
+                    </label>
+                  </div>
+
+                  <div class="field__list-item">
+                    <input
+                      type="checkbox"
+                      id="checkbox-1"
+                      name="checkbox-1"
+                      class="field__input-toggle field__input-checkbox"
+                      value="Bike"
+                    />
+                    <label
+                      for="checkbox-1"
+                      class="
+                        field__label
+                        field__label--extra-small
+                        field__label--toggle
+                        field__label--checkbox
+                      "
+                      tabindex="0"
+                      role="button"
+                    >
+                      I have a bike
+                    </label>
+                  </div>
+
+                  <div class="field__list-item">
+                    <input
+                      type="checkbox"
+                      id="checkbox-2"
+                      name="checkbox-2"
+                      class="field__input-toggle field__input-checkbox"
+                      value="Car"
+                    />
+                    <label
+                      for="checkbox-2"
+                      class="
+                        field__label
+                        field__label--extra-small
+                        field__label--toggle
+                        field__label--checkbox
+                      "
+                      tabindex="0"
+                      role="button"
+                    >
+                      tag
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sidebar-filters__content-container button-group align-center"
+          >
+            <button class="link">Clear filters</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- grid-column-main -->
+      <div class="grid-column-main--with-sidebar">
+        <!-- Pathway list -->
+        <div class="card-list card-list--vertical">
+          <!-- Standard pathway card -->
+          <a href="#" class="card card--pathway">
+            <div class="card__content">
+              <div class="card__heading-container">
+                <h4 class="card__heading">Experiencing a natural disaster</h4>
+                <h4 class="card__subheading text--transparent-70-base-blue">
+                  GovX
+                </h4>
+              </div>
+
+              <div class="card__description-container">
+                <p class="text--black">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur sem lectus, faucibus eget lectus non, ultrices
+                  pellentesque velit. Praesent accumsan urna at pretium
+                  pulvinar.
+                </p>
+              </div>
+
+              <div class="pills-container">
+                <div class="pill">
+                  <img
+                    class="pill__image"
+                    src="images/svgs/tag.svg"
+                    alt="tag_image"
+                  />Pill
+                </div>
+
+                <div class="pill">
+                  <img
+                    class="pill__image"
+                    src="images/svgs/tag.svg"
+                    alt="tag_image"
+                  />Pill
+                </div>
+
+                <div class="pill">
+                  <img
+                    class="pill__image"
+                    src="images/svgs/tag.svg"
+                    alt="tag_image"
+                  />Pill
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Standary pathway card -->
+          <a href="#" class="card card--pathway">
+            <div class="card__content">
+              <div class="card__heading-container">
+                <h4 class="card__heading">Experiencing a natural disaster</h4>
+                <h4 class="card__subheading text--transparent-70-base-blue">
+                  GovX
+                </h4>
+              </div>
+
+              <div class="card__description-container">
+                <p class="text--black">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur sem lectus, faucibus eget lectus non, ultrices
+                  pellentesque velit. Praesent accumsan urna at pretium
+                  pulvinar.
+                </p>
+              </div>
+
+              <div class="pills-container">
+                <div class="pill">
+                  <img
+                    class="pill__image"
+                    src="images/svgs/tag.svg"
+                    alt="tag_image"
+                  />Pill
+                </div>
+
+                <div class="pill">
+                  <img
+                    class="pill__image"
+                    src="images/svgs/tag.svg"
+                    alt="tag_image"
+                  />Pill
+                </div>
+
+                <div class="pill">
+                  <img
+                    class="pill__image"
+                    src="images/svgs/tag.svg"
+                    alt="tag_image"
+                  />Pill
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid-column-main">
+        <!-- Pagination -->
+        <div class="pagination__container">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <button class="pagination__button">Previous</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__button">1</button>
+            </li>
+            <li class="pagination__item">...</li>
+            <li class="pagination__item">
+              <button class="pagination__button pagination__button--active">
+                5
+              </button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__button">6</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__button">7</button>
+            </li>
+            <li class="pagination__item">...</li>
+            <li class="pagination__item">
+              <button class="pagination__button">9</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__button">Next</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer grid-column-main--full-width">
+        <div class="footer__content">
+          <div class="footer__nav-links">
+            <a class="footer__nav-link" href="#"> Privacy </a>
+            <a class="footer__nav-link" href="#"> Need help? </a>
+            <a class="footer__nav-link" href="#"> Accessibility </a>
+            <a class="footer__nav-link" href="#"> Disclaimer </a>
+          </div>
+          <div class="footer__footer-bottom">
+            <span class="footer__copyright-disclaimer"
+              >&copy; Commonwealth of Australia</span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
