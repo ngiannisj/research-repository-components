@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -31,6 +32,7 @@
 
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- Scripts -->
     <script src="scripts/javascript.js"></script>
   </head>
@@ -83,62 +85,55 @@
         </div>
       </header>
 
-      <!-- grid-column-main -->
-      <div class="grid-column-main">
-        <h1 class="margin-bottom--large">Login</h1>
-        <div class="field">
-          <label for="fname" class="field__label">Email address:</label>
-          <input
-            type="text"
-            id="fname"
-            class="field__input"
-            name="fname"
-            value=""
-          />
-        </div>
-
-        <div class="field">
-          <label for="fname" class="field__label">Password:</label>
-          <input
-            type="text"
-            id="fname"
-            class="field__input"
-            name="fname"
-            value=""
-          />
-        </div>
-
-        <div class="button-group">
-          <div class="field__list-item">
-            <input
-              type="checkbox"
-              id="checkbox-1"
-              name="checkbox-1"
-              class="field__input-toggle field__input-checkbox"
-              value="Bike"
-            />
-            <label
-              for="checkbox-1"
-              class="field__label field__label--toggle field__label--checkbox"
-              tabindex="0"
-              role="button"
-            >
-              I have a bike
-            </label>
+      <div class="grid-column-main--full-width grid-column-home-hero">
+        <div class="home-hero">
+          <div class="home-hero__container">
+            <div class="home-hero__container-right">
+              <div class="home-hero__title margin-bottom--small">
+                <div
+                  class="
+                    home-hero__title-word--background-offset
+                    home-hero__title-word--background-offset-red
+                  "
+                >
+                  Discover
+                </div>
+                ,
+                <div
+                  class="
+                    home-hero__title-word
+                    home-hero__title-word--background-offset
+                    home-hero__title-word--background-offset-yellow
+                  "
+                >
+                  re-use
+                </div>
+                and
+                <div
+                  class="
+                    home-hero__title-word--background-offset
+                    home-hero__title-word--background-offset-green
+                  "
+                >
+                  share
+                </div>
+                research.
+              </div>
+              <p class="margin-bottom--medium">
+                Get visibility on all the research done by the teams at DTA and
+                use past research to help improve on current projects.
+                Contribute to the repository with your team’s research so people
+                can see and use the amazing work you have done.
+              </p>
+              <button class="button button--small button--yellow">
+                Contribute to the library
+              </button>
+            </div>
           </div>
-
-          <a class="link link--red align-right" href="#">Forgot Password?</a>
         </div>
 
-        <div class="button-group">
-          <button class="button">Login</button>
-        </div>
-
-        <div class="button-group button-group--vertical">
-          <h4>Don't have an account?</h4>
-          <a class="link link--green" href="#"
-            >Create an account to contribute</a
-          >
+        <div class="home-hero__curve">
+          <img class="home-hero__image" src="images/pngs/person-working-idea.png" alt="person_thinking" />
         </div>
       </div>
 

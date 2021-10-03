@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
   //Accordion
 
   //Stops accordion from opening if a button inside the accordion button is clicked
@@ -42,6 +42,7 @@ $( document ).ready(function() {
   //Modal
 
   //Stop body scroll when modal is open
+  
 
   //Lock focus to modal when modal is open
   $(document).ready(function () {
@@ -81,19 +82,24 @@ $( document ).ready(function() {
 
     findInsiders($(".modal"));
   });
+
+  //===========================================================
+
+  $(".link--back").click(function() {
+    window.history.back();
+  })
 });
 
-
-  //Selectlist accordion functionality
-  function selectListOptionClick($this) {
-    $($this)
-      .closest(".accordion__container--select-list")
-      .find(".accordion__button--select-list")
-      .first()
-      .attr("data-selected", $($this).data("value"));
-    $($this)
-      .closest(".accordion__container--select-list")
-      .find(".accordion__button--select-list")
-      .first()
-      .html($($this).text());
-  }
+//Selectlist accordion functionality
+function selectListOptionClick($this) {
+  $($this)
+    .closest(".accordion__container--select-list")
+    .find(".accordion__button--select-list")
+    .first()
+    .attr("data-selected", $($this).data("value"));
+  $($this)
+    .closest(".accordion__container--select-list")
+    .find(".accordion__button--select-list")
+    .first()
+    .html($($this).text());
+}

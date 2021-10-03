@@ -6,6 +6,10 @@
 
   &__content-container {
     padding: 0 2.6rem;
+
+    &:first-of-type {
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__title {

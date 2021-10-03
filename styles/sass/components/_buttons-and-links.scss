@@ -99,19 +99,22 @@
     //Colours
     &.button {
       &--yellow {
-        &:hover, &.button--active {
+        &:hover,
+        &.button--active {
           background-color: $base-yellow;
         }
       }
 
       &--green {
-        &:hover, &.button--active {
+        &:hover,
+        &.button--active {
           background-color: $base-green;
         }
       }
 
       &--red {
-        &:hover, &.button--active {
+        &:hover,
+        &.button--active {
           background-color: $base-red;
         }
       }
@@ -159,10 +162,25 @@
   justify-content: center;
   background: none;
   border: none;
+  width: fit-content;
 
-  &__image {
-    width: 2.2rem;
-    height: 2.5rem;
-    margin-left: 1.2rem;
+  &--back {
+    &:hover {
+      .link__icon {
+        transform: rotate(180deg) translateX(1rem);
+      }
+    }
+  }
+
+  &__icon {
+    padding-left: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s ease 0s;
+
+    &--flip {
+      transform: rotate(180deg);
+    }
   }
 }
